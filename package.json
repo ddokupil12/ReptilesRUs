@@ -2,7 +2,7 @@
   "name": "InclassExamples",
   "version": "1.0.0",
   "description": "Tutorial Information",
-  "main": "app.js",
+  "main": "routing_server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
