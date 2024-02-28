@@ -1,0 +1,10 @@
+CREATE SCHEMA rep_r_us_db;
+
+CREATE TABLE rep_r_us_db.reps (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  description VARCHAR(255),
+  dimentions VARCHAR(255),
+  weight float,
+  compatibility VARCHAR(255)
+);
