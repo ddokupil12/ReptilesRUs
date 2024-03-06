@@ -1,6 +1,9 @@
 const express = require("express");
-const api = require("./myApi.js")
+const api = require("./routes/books.js");
 const app = express();
+const bodyParser = require('body-parser')
+app.use(express.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
 const port = 3000;
 
 app.get("/", function (req, res) {
@@ -10,6 +13,8 @@ app.get("/", function (req, res) {
 app.get("/unique", function (req, res) {
   res.send("This is a different page!");
 });
+
+
 
 app.use("/api", api);
 
