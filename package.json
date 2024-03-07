@@ -2,7 +2,7 @@
   "name": "reptilesrus",
   "version": "1.0.0",
   "description": "Tutorial Information",
-  "main": "routing_server.js",
+  "main": "routing_module_server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

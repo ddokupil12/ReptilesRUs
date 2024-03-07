@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reptiles "r" Us | Home</title>
+	<style>
+		body {
+			display: grid;
+			min-height: 100vh;
+			grid-template-columns: 200px 1fr 150px;
+			grid-template-rows: min-content 1fr min-content;
+		}
+		.logo {
+			grid-row: 1;
+			grid-column: 1 / 2;
+		}
+		.navBar {
+			grid-row: 1;
+			grid-column: 2 / 3;
+		}
+		.login {
+			grid-row: 1;
+			grid-column: 3 / 4;
+		}
+		.productPage {
+			grid-row: 3;
+			grid-column: 1 / 2;
+		}
+		.center {
+			grid-row: 2;
+			grid-column: 2 / 3;
+		}
+		.container {
+			grid-row: 4;
+			grid-column: 1 / 4;
+		}
+	</style>
+</head>
+<body> 
+	<p class="logo">Reptiles "r" Us</p>
+	<table class="navBar">
+		<thead>
+			<th onclick="console.log('clicked about')">About</th>
+			<th onclick="console.log('clicked our services')">Our Services</th>
+			<th onclick="console.log('clicked contact')">Contact Us</th>
+		</thead>
+	</table>
+
+	<button>Login</button>
+	<p>Connecting you to your reptile</p>
+	<button onclick="console.log('clicked start Looking')">Start Looking</button>
+
+</body> 
+
+<%- include('../partials/foot') %>
