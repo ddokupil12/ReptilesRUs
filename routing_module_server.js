@@ -1,25 +1,34 @@
 const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 // const db = require("./db_connection.js").db_connection;
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 const port = 3000;
 
 app.get("/", (req, res) => {
-  res.render(`pages/home`, {page_css: "home.css", page_title: "Reptiles \"r\" Us "});
+    res.render(`pages/home`, {page_css: "home.css", page_title: "Reptiles \"r\" Us "});
 });
 
 app.get("/login", function (req, res) {
-  res.render(`pages/login`);
+    res.render(`pages/login`);
 });
 
-// app.get("/val", (req, res) => {
-//   console.log(req);
-// })
+const users = {
+    "ddokupil@trinity.edu": "pass"
+}
+
+app.post("/val", (req, res) => {
+    let email = req.body['email'];
+    if(req.body['passwd'] === users[email]){
+        res.send(`You're logged in now`);
+    }else{
+        res.send("Login failed");
+    }
+});
 
 app.get("/unique", function (req, res) {
-  res.send("This is a different page!");
+    res.send("This is a different page!");
 });
 
 // app.get("/homepage", (req, res) => {
@@ -37,5 +46,5 @@ app.get("/unique", function (req, res) {
 // });
 
 app.listen(port, function () {
-  console.log(`Example app listening on port ${port}!`);
+    console.log(`Example app listening on port ${port}!`);
 });
